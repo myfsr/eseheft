@@ -1,0 +1,144 @@
+% Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf)
+\documentclass{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{fontenc}
+\usepackage{enumitem}
+\usepackage[a5paper, margin=1cm]{geometry}
+\usepackage{amssymb}
+\usepackage{scrextend} # for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
+\setlength{\emergencystretch}{1em}
+
+\begin{document}
+\newcommand{\keyword}{\emph}
+\section{\texorpdfstring{$\mu$}{my}FSR -- Fachschaftsrat Mathematik}
+Alle Studierenden, die an der TU Dresden Mathematik studieren, sind die \keyword{Fachschaft} Mathematik.
+Sie werden vertreten und unterstützt vom Fachschaftsrat Mathematik, kurz μFSR.
+
+\subsection{Unterstützung beim Studium}
+\label{sub:unterstutzung_beim_studium}
+\begin{description}
+  \item[Studienberatung] Wir sind Studierende wie du, aber teilweise schon etwas länger hier.
+    Daher können wir dir bei vielen Fragen zum Studienablauf, Prüfungsorganisation und -ordnung, Ansprechpartnern in der Uni weiterhelfen.
+    Frage und wir freuen uns dich zu unterstützen.
+    Dazu kann auch gehören bei Konflikten zwischen Studierenden und Dozenten zu vermitteln.
+  \item[Veranstaltungen] Wir bieten Veranstaltungen an wie beispielsweise
+    \begin{itemize}
+      \item Spiele-, Skatabende
+      \item Weihnachtsfeier
+      \item Erstsemestereinführung inkl.\ Ersti-Fahrt
+      \item Winterball
+      \item Sportturniere, z.B.\ Volleyball, Fußball
+      \item Wir unterstützen gerne deine Initiative organisatorisch und finanziell.
+    \end{itemize}
+    Achte einfach auf die Plakate an den Willersbaueingängen und an der Pinnwand im EG des C-Flügels und
+    abonniere den νsletter des μFSR\footnote{\url{myfsr.de/minitrue/auth/page/email/register#}}.
+    % TODO:  <30-08-17, Bela> Kurzlink νsletter %
+  \item[Klausuren] Klausuren von vorherigen Jahren sind hilfreich bei der Prüfungsvorbereitung.
+    Wir sammeln Mitschriften und stellen sie euch zur Verfügung.
+    Schreibe einfach eine e-Mail an \url{klausur@myfsr.de}!
+  \item[νsletter] Mit dem Newsletter des μFSR informieren wir euch zum einen über
+    Veranstaltungen des μFSR und zum anderen über die interessantesten Angebote der Uni,
+    die uns erreichen oder die wir finden.
+\end{description}
+
+\subsection{Hochschulpolitische Vertretung}
+\label{sub:hochschulpolitische_vertretung}
+Der μFSR setzt sich bei Entscheidungen in der Uni, in erster Linie innerhalb der Fakultät Mathematik,
+für die Interessen der Studenten ein.
+Dafür hat er Vertreter in verschiedenen Gremien\footnote{\url{myfsr.de/dokuwiki/doku.php?id=hopo:gremien}}.
+Wenn man sich in diesem Bereich \keyword{engagiert} bekommt man vieles von dem mit, was hinter den Kulissen
+des Unialltags passiert und kann einiges bewegen.
+Auch ohne politische oder Unierfahrung kannst du dich einbringen und spannende Aufgaben übernehmen!
+
+\subsection{Mitmachen}
+\label{sub:mitmachen}
+Wir freuen uns, wenn du dich einbringen möchtest! Jede(r) kann aktiv werden.
+Dadurch, dass jedes Engagement freiwillig ist, kann man sich auf die eigenen Interessen konzentrieren
+und mit Gleichgesinnten zusammenarbeiten. Mögliche Aufgaben sind
+\begin{itemize}
+  \item Das, was du bewegen möchtest!
+  \item Die Veranstaltung, die du haben möchtest.
+  \item Finanzen, Sprecher (Voraussetzung: gewähltes Mitglied)
+  \item Sitzungsleitung, Protokollant (idealerweise kein gewähltes Mitglied)
+  \item Gremienmitgliedschaft (manche direkt gewählt, andere vom FSR entsandt)
+  \item \dots
+\end{itemize}
+Bei den meisten Themen ist es unerheblich, ob man als gewähltes oder nicht-gewähltes („assoziiertes“) Mitglied dabei ist.
+
+\subsection{Hochschulgruppen}
+\label{sub:hochschulgruppen}
+Neben den hochschulpolitischen Vertretungen (FSR, Studentenrat (StuRa)) gibt es zahlreiche Hochschulgruppen,
+die sich für verschiedenes einsetzen. Manche stellen sich in diesem Heft vor, alle findet man auf der Internetseite des StuRa\footnote{\url{stura.tu-dresden.de/hochschulgruppen}}.
+
+\section{Angebote der Universität: Checkliste}
+\label{sec:angebote_der_universitat}
+Die TU Dresden bietet eine Menge Services an, die sehr praktisch für das Studium und auch drum herum sein können.
+Mann muss sie nur kennen. Hier ist eine Liste von Angeboten, die für sich einrichten sollte.
+\newcommand{\clitem}[1]{\item[$\square$ #1]}
+% \newcommand{footnoteref}[1]{\footnotemark[\ref{#1}]}
+\begin{description}
+  \clitem{ZIH-Login aktivieren} Das Zentrum für Informationsdienste und Hochleistungsrechnen (\keyword{ZIH})
+    bietet alle IT-Dienste für die TUD an. Man braucht daher einen \keyword{ZIH-Login}, den bei der
+    Immatrikulation bekommen hat, aber noch aktiviert werden muss.
+    Dieser wird häufig als \keyword{s-Nummer} bezeichnet, da es eine Nummer mit vorangestelltem „s“ ist.
+    Informationen dazu und zu allen (folgenden) IT-Diensten finden sich ausführlich auf den Erstsemesterseiten des ZIH \footnote{\url{tu-dresden.de/zih/dienste/service-desk/ese}\label{zihurl}}.
+    \clitem{Uni-e-Mail-Adresse} Du hast eine e-Mail-Adresse\footref{zihurl} der Form \url{vorname.nachname@mailbox.tu-dresden.de}.
+    Zum Einen ist es praktisch für Kommunikation in Uniangelegenheiten dafür eine e-Mail-Adresse zu haben.
+    Zum Anderen bist du von der Uni verpflichtet, diese regelmäßig zu lesen.
+    Beispielsweise kommt darüber rechtzeitig die Erinnerung, sich für das kommende Semester zurückzumelden.
+    Du kannst die eingehenden e-Mails auf deine private e-Mail-Adresse umleiten oder sie wie andere Adressen
+    online oder über einen e-Mail-Client wie Thunderbird abrufen (unsere Empfehlung).
+  \clitem{eduroam} Auf dem gesamten Unigelände und in zahlreichen Unis auf der ganzen Welt steht dir
+    das WLAN \keyword{eduroam}\footref{zihurl} mit Internetzugang zur Verfügung.
+    \clitem{νsletter} Melde dich doch für den Newsletter des μFSR an\footnote{myfsr.de/minitrue/auth/page/email/register#}.
+    % TODO:  <30-08-17, Bela> Kurzlink für νsletter %
+    Wir spammen dich nicht voll, sondern
+    filtern aus den zahlreichen Angeboten für Studierende die für dich (hoffentlich) spannensten heraus.
+    Das ist einer der sinnvollen Verwendungszwecke für die Uni-e-Mail-Adresse.
+  \clitem{SLUB-Karte} Die Sächsische Landes- und Universitätsbibliothek (SLUB) hat ihre eigene Benutzerkarte,
+    die man sich ausstellen lässt. Du füllst erst das Anmeldeformular aus und holst dann die SLUB-Karte ab. Dabei an Perso und Immatrikulationsbescheinigung denken. Infos auf \url{slub-dresden.de/service/nutzer-der-slub-werden}.
+  \clitem{Mensa-Karte} Du kannst theoretisch in der Mensa mit Bargeld bezahlen,
+    aber das ist unpraktisch und hält den eh vollen Betrieb auf und
+    du müsstest dich jedes Mal als Student ausweisen.
+    Deshalb gibt es die Mensa-Karte,
+    die du in jeder Mensa für 5€ Kaution bekommst.
+    Um Studentenpreise zu zahlen musst du die EMeal-Bescheinigung von deinem Immatrikulationsbogen
+    einmal am Anfang jedes Semesters vorzeigen.
+    Studentenausweis oder Immatrikulationsbescheinigung reichen nicht.
+  \clitem{OFP} Die Orientierungsplattform Forschung und Praxis (OFP) bietet regelmäßig spannende Veranstaltungen
+    speziell für uns Mathematikstudierende an.
+    Diese kann man leicht übersehen und verpassen.
+    Daher ist es eine gute Idee sich für den Newsletter anzumelden.
+    Das geht indem man sich bei OPAL anmeldet und zum passenden auf den
+    OFP-Seite\footnote{\url{tu-dresden.de/tu-dresden/profil/exzellenz/zukunftskonzept/tud-structures/zill/orientierungsplattform-forschung-praxis/mathematik}}
+    verlinkten Kurs\footnote{\url{https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/12520161286/CourseNode/94473775961368}} geht.
+    
+    Ja, OPAL ist etwas umständlich zu bedienen.
+    \clitem{Sportkurse} Das Universitätssportzentrum (\keyword{USZ})\footnote{\url{tu-dresden.de/usz/zentrale-infos/hinweise-zur-buchung}} bietet ein riesiges Angebot\footnote{\url{www.usz.tu-dresden.de}} an
+    Sportkursen an, die für Studierende auch sehr günstig sind.
+    Sehr viele dieser Kurse sind sehr beliebt, weshalb man sehr schnell bei der Anmeldung sein muss.
+    Sehr schnell bedeutet, dass innerhalb von unter 5 Minuten alle Plätze vergeben sein können.
+    % TODO:  <30-08-17, Bela> wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. %
+    Der Anmeldebeginn steht bei dem jeweiligen Kurs dabei. Die ersten beginnen am 10.10.2017 um 17 Uhr.
+\end{description}
+Die folgende Punkte muss man nicht unbedingt direkt am Anfang des Semesters beachten, sollte man
+sich aber bald anschauen.
+\begin{description}
+  \item[ownCloud] Unter anderem bietet das ZIH dir 2GB Online-Speicher\footref{zihurl} an.
+    Dieser läuft unter dem Name CloudStore (beziehungsweise dem Namen der verwendeten Software ownCloud).
+    Dieser ist gegenüber kommerziellen Anbietern zu bevorzugen,
+    da hierbei die Daten auf Uni-Servern bleiben. Man kann einzelne Ordner zum Austausch freigeben.
+  \item[OPAL] Wofür OPAL steht ist nicht so einfach zu ermitteln. Es ist eine Internetseite, die hauptsächlich
+    zum Einschreiben in Übungen und Hochladen von Übungszetteln genutzt wird. Theoretisch geht noch viel mehr
+    wie Online-Tests und -Übungen.
+    Anmelden kannst du dich mit den ZIH-Login-Daten (s-Nummer).
+  \item[Semesterticket] Mit dem Semesterticket kannst du den ÖPNV nutzen. Welche Busse, Bahnen und Fahrräder dazugehören und wann du wo ein Fahrrad mitnehmen kannst,
+    steht ausführlich auf der StuRa-Seite.\footnote{\url{stura.tu-dresden.de/semesterticket}}.
+  \item[Lehrveranstaltungskatalog] Der Lehrveranstaltungskatalog\footnote{\url{www.math.tu-dresden.de/math/lvk/lv-abfrage-wi17.htm}} enthält Orte und Zeiten aller angebotenen
+    Vorlesungen, Übungen, Seminare, etc. Jede Fakultät hat einen eigenen.
+  
+\end{description}
+\end{document}
