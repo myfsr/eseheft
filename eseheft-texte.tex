@@ -1,14 +1,19 @@
+%! TEX program = lualatex
+
+% TODO:  <31-08-17, Bela> \url beibringen, dass das Internetlinks sind %
 % Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf)
 \documentclass{scrartcl}
+% \usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
 \usepackage{hyperref}
-\usepackage[utf8]{inputenc}
 \usepackage{microtype}
-\usepackage{fontenc}
 \usepackage{enumitem}
 \usepackage[a5paper, margin=1cm]{geometry}
 \usepackage{amssymb}
-\usepackage{scrextend} # for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
+\usepackage{scrextend} % for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
 \setlength{\emergencystretch}{1em}
 
 \begin{document}
@@ -34,7 +39,7 @@ Sie werden vertreten und unterstützt vom Fachschaftsrat Mathematik, kurz μFSR.
       \item Wir unterstützen gerne deine Initiative organisatorisch und finanziell.
     \end{itemize}
     Achte einfach auf die Plakate an den Willersbaueingängen und an der Pinnwand im EG des C-Flügels und
-    abonniere den νsletter des μFSR\footnote{\url{myfsr.de/minitrue/auth/page/email/register#}}.
+    abonniere den νsletter des μFSR\footnote{\url{myfsr.de/minitrue/auth/page/email/register\#}}.
     % TODO:  <30-08-17, Bela> Kurzlink νsletter %
   \item[Klausuren] Klausuren von vorherigen Jahren sind hilfreich bei der Prüfungsvorbereitung.
     Wir sammeln Mitschriften und stellen sie euch zur Verfügung.
@@ -86,6 +91,8 @@ die sich für verschiedenes einsetzen. Manche stellen sich in diesem Heft vor, a
 \label{sec:angebote_der_universitat}
 Die TU Dresden bietet eine Menge Services an, die sehr praktisch für das Studium und auch drum herum sein können.
 Mann muss sie nur kennen. Hier ist eine Liste von Angeboten, die für sich einrichten sollte.
+Eine deutlich umfangreichere Informationssammlung zum Studienstart
+existiert online\footnote{\url{tu-dresden.de/studienstart}} von der Uni.
 \newcommand{\clitem}[1]{\item[$\square$ #1]}
 % \newcommand{footnoteref}[1]{\footnotemark[\ref{#1}]}
 \begin{description}
@@ -102,7 +109,7 @@ Mann muss sie nur kennen. Hier ist eine Liste von Angeboten, die für sich einri
     online oder über einen e-Mail-Client wie Thunderbird abrufen (unsere Empfehlung).
   \clitem{eduroam} Auf dem gesamten Unigelände und in zahlreichen Unis auf der ganzen Welt steht dir
     das WLAN \keyword{eduroam}\footref{zihurl} mit Internetzugang zur Verfügung.
-    \clitem{νsletter} Melde dich doch für den Newsletter des μFSR an\footnote{myfsr.de/minitrue/auth/page/email/register#}.
+    \clitem{νsletter} Melde dich doch für den Newsletter des μFSR an\footnote{myfsr.de/minitrue/auth/page/email/register\#}.
     % TODO:  <30-08-17, Bela> Kurzlink für νsletter %
     Wir spammen dich nicht voll, sondern
     filtern aus den zahlreichen Angeboten für Studierende die für dich (hoffentlich) spannensten heraus.
@@ -136,8 +143,19 @@ Mann muss sie nur kennen. Hier ist eine Liste von Angeboten, die für sich einri
 Die folgende Punkte muss man nicht unbedingt direkt am Anfang des Semesters beachten, sollte man
 sich aber bald anschauen.
 \begin{description}
-  \item[Nebenfach] Zum Mathematikstudium todo! 
-  
+  \item[Nebenfach] Zum Mathematikstudium gehört ein Nebenfach.
+    Für dieses gibt es mehrere Vorschläge, die in der Anlage 2 der Prüfungsordnung
+    \footnote{\url{www.verw.tu-dresden.de/AmtBek/PDF-Dateien/2016-03/01soBA26.02.2016.pdf\#page=64}}
+    nachzulesen sind.
+    Du kannst aber auch andere Module wählen, solange sie in der Summe
+    die gleiche Anzahl an Leistungspunkten haben.
+    Bevor du ein nicht vorgeschlagenes Modul belegst wende dich an
+    das Prüfungsamt (Frau Schreiter)\footnote{\url{tu-dresden.de/mn/math/studium/pruefungsaemter}}
+    und kläre ob es angerechnet werden kann und auf welche Art
+    du dich zur Prüfung anmelden kannst.
+
+    Für dein Nebenfach entscheidest du dich mit deiner ersten
+    Prüfungsanmeldung.
   \item[ownCloud] Unter anderem bietet das ZIH dir 2GB Online-Speicher\footref{zihurl} an.
     Dieser läuft unter dem Name CloudStore (beziehungsweise dem Namen der verwendeten Software ownCloud).
     Dieser ist gegenüber kommerziellen Anbietern zu bevorzugen,
@@ -150,6 +168,33 @@ sich aber bald anschauen.
     steht ausführlich auf der StuRa-Seite.\footnote{\url{stura.tu-dresden.de/semesterticket}}.
   \item[Lehrveranstaltungskatalog] Der Lehrveranstaltungskatalog\footnote{\url{www.math.tu-dresden.de/math/lvk/lv-abfrage-wi17.htm}} enthält Orte und Zeiten aller angebotenen
     Vorlesungen, Übungen, Seminare, etc. Jede Fakultät hat einen eigenen.
+  \item[Studienfachberatung] Die Studienfachberatung berät zu
+    inhaltlichen (Welche Module sind für mich sinnvoll, etc.?)
+    und organisatorischen Fragen.
+    In einigen solcher Fälle kann der μFSR auch weiterhelfen.
+
+    Für den Bachelor Mathematik bietet diese Dr.\ Hans-Peter Scheffler
+    \footnote{\url{tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}, für das Lehramt Mathematik Dr.\ Karin Weigel\footnote{\url{tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}.
+  \item[Zentrale Studienberatung] Die zentrale Studienberatung\footnote{\url{tu-dresden.de/studium/im-studium/beratung-und-service/zentrale-studienberatung}} ist der erste Ansprechpartner wenn über einen Studiengangswechsel nachgedacht wird. Daneben bietet sie aber auch weitere Angebote,
+    die man sich anschauen sollte.
+    Nichtsdestotrotz haben die meisten innerhalb des Mathematikstudiums keinen Kontakt dahin.
+  \item[Career-Service] Der Career-Service\footnote{\url{tu-dresden.de/studium/im-studium/beratung-und-service/career-service}} bietet in erster Linie Unterstützung beim Berufseinstieg.
+    Aber er bietet auch zahlreiche Workshops\footnote{\url{tu-dresden.de/karriere/berufseinstieg/ressourcen/dateien/flyer/2017/semesterprogramm-des-career-service-winter-2017-18\#page=2}} an, die bereits im Studium
+    sehr hilfreich sein können wie bspw.\ zu Prüfungsbewältigung und
+    wissenschaftlichem Arbeiten und Schreiben.
+  \item[Schreibzentrum] Das Schreibzentrum bietet Unterstützung beim Schreiben von wissenschaftlichen Arbeiten, siehe auch deren Seite.
+  \item[Studiendokumente] Um nicht von bisher unbekannten Regelungen
+    überrascht zu werden, empfiehlt es sich, die Studiendokumente
+    \footnote{Bachelor: \url{tu-dresden.de/mn/studium/studiendokumente-formulare/mathematik-bachelor}\\
+    Lehramt: \url{tu-dresden.de/zlsb/lehramtsstudium/studiendokumente}}
+    (Studien- und Prüfungsordnung) zur Verfügung stehen zu haben und
+    gelesen zu haben.
   
 \end{description}
+Wenn die hier gegebenen Informationen mehr auf den Bachelor
+Mathematik zugeschnitten sind als auf Lehramt Mathematik,
+dann tut uns das Leid. Es liegt daran, dass
+die meisten μFSR-ler kein Lehramt studieren und sich deshalb
+nicht so gut auskennen. Du kannst das ändern, indem du den
+μFSR als gewähltes oder assoziiertes Mitglied unterstützt!
 \end{document}
