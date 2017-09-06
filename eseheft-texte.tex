@@ -1,6 +1,5 @@
 %! TEX program = lualatex
 
-% TODO:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
 \documentclass{scrartcl}
 % \usepackage[T1]{fontenc}
 % \usepackage[utf8]{inputenc}
@@ -10,28 +9,58 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{enumitem}
-\usepackage[a5paper, margin=1cm]{geometry}
+\usepackage[a5paper, margin=1cm, right=3cm]{geometry}
 \usepackage{amssymb}
 \usepackage{scrextend} % for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
 \setlength{\emergencystretch}{1em}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{textcomp} % für \textmu
+\setlist{noitemsep} % Listen werden kompakter
 
 \begin{document}
 \newcommand{\keyword}{\emph}
+\newcommand{\todo}[1]{\marginpar{TODO\\#1}}
+% TODO:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
+\newpage
+{ \newgeometry{margin=2cm}
+  \thispagestyle{empty} % no page number
+  % Titlepage, all formatting should be restricted to this page.
+  \begin{flushright}
+    \includegraphics[width=0.3\textwidth]{./fsrlogos/bw_1024.png}
+  \end{flushright}
+  \begin{center}
+    \begin{huge}
+      Erstsemesterinfos Mathematik
+    \end{huge}\\\bigskip
+    \begin{Large}
+      vom FSR Mathematik
+    \end{Large}\\\bigskip
+%    \includegraphics[width=\textwidth]{./fsrfoto.jpg}
+  \end{center}
+  TODO: Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) 
+  \vfill
+  \begin{small}
+    Dieses Heft kann auch als pdf\footnote{\url{TODO: link}} heruntergeladen werden.
+  \end{small}
+  \newpage
+}
+restoregeometry % original margins
+\pagenumbering{arabic} % resets numbering to 1
+\pagestyle{plain}
 \section*{\texorpdfstring{$\mu$}{my}FSR -- Fachschaftsrat Mathematik}
-Alle Studierenden, die an der TU Dresden Mathematik studieren, sind die \keyword{Fachschaft} Mathematik.
+Alle Studierenden der Mathematik an der TU Dresden sind die \keyword{Fachschaft} Mathematik.
 Sie werden vertreten und unterstützt vom Fachschaftsrat Mathematik, kurz μFSR.
 
 Der μFSR ist erreichbar per e-Mail\footnote{\href{mailto:kontakt@myfsr.de}{\nolinkurl{kontakt@myfsr.de}}},
-Internetseite \footnote{\url{https://.myfsr.de}} und vorallem persönlich im Raum
+Internetseite\footnote{\url{https://myfsr.de}} und vor allem persönlich im Raum
 \href{https://navigator.tu-dresden.de/etplan/wil/-1/raum/2193-1.0170}{WIL B 23}.
 
 \subsection*{Unterstützung beim Studium}
 \label{sub:unterstutzung_beim_studium}
 \begin{description}
   \item[Studienberatung] Wir sind Studierende wie du, aber teilweise schon etwas länger hier.
-    Daher können wir dir bei vielen Fragen zum Studienablauf, Prüfungsorganisation und -ordnung, Ansprechpartnern in der Uni weiterhelfen.
+    Daher können wir dir bei vielen Fragen zu Studienablauf, Prüfungsorganisation und -ordnung, Ansprechpartnern in der Uni weiterhelfen.
     Frage und wir freuen uns dich zu unterstützen.
     Dazu kann auch gehören bei Konflikten zwischen Studierenden und Dozenten zu vermitteln.
   \item[Veranstaltungen] Wir bieten Veranstaltungen an wie beispielsweise
@@ -41,15 +70,14 @@ Internetseite \footnote{\url{https://.myfsr.de}} und vorallem persönlich im Rau
       \item Erstsemestereinführung inkl.\ Ersti-Fahrt
       \item Winterball
       \item Sportturniere, z.B.\ Volleyball, Fußball
-      \item Wir unterstützen gerne deine Initiative organisatorisch und finanziell.
+      \item Wir unterstützen gerne deine Initiative organisatorisch und/ oder finanziell.
     \end{itemize}
     Achte auf die Plakate an den Willersbaueingängen und an der Pinnwand im EG des C-Flügels und
-    abonniere den νsletter des μFSR\footnote{\url{www.myfsr.de/minitrue/auth/page/email/register\#}}.
-    % TODO:  <30-08-17, Bela> Kurzlink νsletter %
+    abonniere den νsletter des μFSR\footnote{\url{https://myfsr.de/minitrue}}.
   \item[Klausuren] Klausuren von vorherigen Jahren sind hilfreich bei der Prüfungsvorbereitung.
     Wir sammeln Mitschriften und stellen sie euch zur Verfügung.
     Schreibe einfach eine e-Mail an \href{mailto:klausur@myfsr.de}{\nolinkurl{klausur@myfsr.de}}!
-  \item[νsletter] Mit dem Newsletter des μFSR informieren wir euch zum einen über
+  \item[$\nu$sletter] Mit dem Newsletter des μFSR informieren wir euch zum einen über
     Veranstaltungen des μFSR und zum anderen über die interessantesten Angebote der Uni,
     die uns erreichen oder die wir finden.
 \end{description}
@@ -57,7 +85,7 @@ Internetseite \footnote{\url{https://.myfsr.de}} und vorallem persönlich im Rau
 \subsection*{Hochschulpolitische Vertretung}
 \label{sub:hochschulpolitische_vertretung}
 Der μFSR setzt sich bei Entscheidungen in der Uni, in erster Linie innerhalb der Fakultät Mathematik,
-für die Interessen der Studenten ein.
+für die Interessen der Studierenden ein.
 Dafür hat er Vertreter in verschiedenen Gremien\footnote{\url{www.myfsr.de/dokuwiki/doku.php?id=hopo:gremien}}.
 Wenn man sich in diesem Bereich \keyword{engagiert} bekommt man vieles von dem mit, was hinter den Kulissen
 des Unialltags passiert und kann einiges bewegen.
@@ -94,11 +122,9 @@ Dazu stellt der zuständige studentische Wahlausschuss das Formular
   Die Fachschaftszugehörigkeit ist in erster Linie bei den Hochschulwahlen relevant,
   denn du kannst nur bei deiner eingetragenen Fachschaft wählen und gewählt werden.
 % Wenn du einen Lehramtsstudiengang studierst, kommen mehrere Fachschaften für dich in Frage: Mathematik, dein zweites Fach und Allgemeinbildende Schulen.
-% TODO:  <30-08-17, Bela> wie heißt die Fachschaft für Lehrämtler richtig %
 % Zu welcher Fachschaft du gehörst, hast du bei der Immatrikulation entschieden, du kannst es aber jederzeit ändern.
 % In erster Linie ist es bei den Hochschulwahlen relevant, denn dort kannst du nur bei deiner offiziellen
 % eigenen Fachschaft wählen und gewählt werden.
-% TODO:  <30-08-17, Bela> wie funktioniert das? Was ist der richtige Link? %
 
 \subsection*{Hochschulgruppen}
 \label{sub:hochschulgruppen}
@@ -109,7 +135,7 @@ alle findet man auf der Internetseite des StuRa\footnote{\url{www.stura.tu-dresd
 \section*{Angebote der Universität: Checkliste}
 \label{sec:angebote_der_universitat}
 Die TU Dresden bietet eine Menge Services an, die sehr praktisch für das Studium und auch drum herum sein können.
-Mann muss sie nur kennen. Hier ist eine Liste von Angeboten, die für sich einrichten sollte.
+Man muss sie nur kennen. Hier ist eine Liste von Angeboten, die du für dich einrichten solltest.
 Eine deutlich umfangreichere Informationssammlung zum Studienstart
 existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
 \newcommand{\clitem}[1]{\item[$\square$ #1]}
@@ -119,21 +145,21 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
     bietet alle IT-Dienste für die TUD an. Man braucht daher einen \keyword{ZIH-Login}, den bei der
     Immatrikulation bekommen hat, aber noch aktiviert werden muss.
     Dieser wird häufig als \keyword{s-Nummer} bezeichnet, da es eine Nummer mit vorangestelltem „s“ ist.
-    Informationen dazu und zu allen (folgenden) IT-Diensten finden sich ausführlich auf den Erstsemesterseiten des ZIH \footnote{\url{www.tu-dresden.de/zih/dienste/service-desk/ese}\label{zihurl}}.
-    \clitem{Uni-e-Mail-Adresse} Du hast eine e-Mail-Adresse\footref{zihurl} der Form \url{vorname.nachname@mailbox.tu-dresden.de}.
+    Informationen dazu und zu allen (folgenden) IT-Diensten finden sich ausführlich auf den
+    Erstsemesterseiten des ZIH \footnote{\url{https://tu-dresden.de/zih/dienste/service-desk/ese}\label{zihurl}}.
+  \clitem{Uni-e-Mail-Adresse} Du hast eine e-Mail-Adresse\footref{zihurl} der Form \url{vorname.nachname@mailbox.tu-dresden.de}.
     Zum Einen ist es praktisch für Kommunikation in Uniangelegenheiten dafür eine e-Mail-Adresse zu haben.
-    Beispielsweise bittet das zentralisierte Lehrerprüfungsamt darum diese Adresse für die Kommunikation zu nutzen.
+    % Beispielsweise bittet das zentralisierte Lehrerprüfungsamt darum diese Adresse für die Kommunikation zu nutzen.
     Zum Anderen bist du von der Uni verpflichtet, diese regelmäßig zu lesen.
     Beispielsweise kommt darüber rechtzeitig die Erinnerung, sich für das kommende Semester zurückzumelden.
     Du kannst die eingehenden e-Mails auf deine private e-Mail-Adresse umleiten oder sie wie andere Adressen
-    online oder über einen e-Mail-Client wie Thunderbird abrufen (unsere Empfehlung).
+    online\footnote{\url{https://msx.tu-dresden.de}}\footnote{Login mit s-Nummer\label{snr}} oder über einen e-Mail-Client wie Thunderbird abrufen (unsere Empfehlung).
   \clitem{eduroam} Auf dem gesamten Unigelände und in zahlreichen Unis auf der ganzen Welt steht dir
     das WLAN \keyword{eduroam}\footref{zihurl} mit Internetzugang zur Verfügung.
-    \clitem{νsletter} Melde dich doch für den Newsletter des μFSR an\footnote{www.myfsr.de/minitrue/auth/page/email/register\#}.
-    % TODO:  <30-08-17, Bela> Kurzlink für νsletter %
+  \clitem{$\nu$sletter} Melde dich doch für den Newsletter des μFSR an\footnote{https://myfsr.de/minitrue}.
     Wir spammen dich nicht voll, sondern
     filtern aus den zahlreichen Angeboten für Studierende die für dich (hoffentlich) spannensten heraus.
-    Das ist einer der sinnvollen Verwendungszwecke für die Uni-e-Mail-Adresse.
+    % Das ist einer der sinnvollen Verwendungszwecke für die Uni-e-Mail-Adresse.
   \clitem{SLUB-Karte} Die Sächsische Landes- und Universitätsbibliothek (SLUB) hat ihre eigene Benutzerkarte,
     die man sich ausstellen lässt. Du füllst erst das Anmeldeformular aus und holst dann die SLUB-Karte ab.
     Dabei an Perso und Immatrikulationsbescheinigung denken.
@@ -145,22 +171,23 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
     die du in jeder Mensa für 5€ Kaution bekommst.
     Um Studentenpreise zu zahlen musst du die EMeal-Bescheinigung von deinem Immatrikulationsbogen
     einmal am Anfang jedes Semesters vorzeigen.
-    Studentenausweis oder Immatrikulationsbescheinigung reichen nicht.
+    % Studentenausweis oder Immatrikulationsbescheinigung reichen nicht.
   \clitem{OFP} Die Orientierungsplattform Forschung und Praxis (OFP) bietet regelmäßig spannende Veranstaltungen
     speziell für uns Mathematikstudierende an.
-    Diese kann man leicht übersehen und verpassen.
-    Daher ist es eine gute Idee sich für den Newsletter anzumelden.
-    Das geht indem man sich bei OPAL anmeldet und zum passenden auf den
+    Diese kann man leicht übersehen und verpassen,
+    daher ist es eine gute Idee sich für den Newsletter anzumelden.
+    Das geht indem man sich bei OPAL\footref{snr} anmeldet und zum passenden auf den
     OFP-Seite\footnote{\url{www.tu-dresden.de/tu-dresden/profil/exzellenz/zukunftskonzept/tud-structures/zill/orientierungsplattform-forschung-praxis/mathematik}}
     verlinkten Kurs\footnote{\url{https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/12520161286/CourseNode/94473775961368}} geht.
     
     Ja, OPAL ist etwas umständlich zu bedienen.
-    \clitem{Sportkurse} Das Universitätssportzentrum (\keyword{USZ})\footnote{\url{www.tu-dresden.de/usz/zentrale-infos/hinweise-zur-buchung}} bietet ein riesiges Angebot\footnote{\url{www.usz.tu-dresden.de}} an
+  \clitem{Sportkurse} Das Universitätssportzentrum (\keyword{USZ})\footnote{\url{www.tu-dresden.de/usz/zentrale-infos/hinweise-zur-buchung}} bietet ein riesiges Angebot\footnote{\url{www.usz.tu-dresden.de}} an
     Sportkursen an, die für Studierende auch sehr günstig sind.
     Sehr viele dieser Kurse sind sehr beliebt, weshalb man sehr schnell bei der Anmeldung sein muss.
     Sehr schnell bedeutet, dass innerhalb von unter 5 Minuten alle Plätze vergeben sein können.
-    % TODO:  <30-08-17, Bela> wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. %
+    \todo{ wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. } % TODO:  <30-08-17, Bela> wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. %
     Der Anmeldebeginn steht bei dem jeweiligen Kurs dabei. Die ersten beginnen am 10.10.2017 um 17 Uhr.
+  \clitem{Kulturangebote} Es gibt ca.\ 30 künstlerische Gruppen\footnote{\url{https://www.studentenwerk-dresden.de/kultur/gruppen.html}} bei denen du dich ausleben kannst.
 \end{description}
 Die folgende Punkte muss man nicht unbedingt direkt am Anfang des Semesters beachten, sollte man
 sich aber bald anschauen.
@@ -182,18 +209,15 @@ sich aber bald anschauen.
     Für dein Nebenfach entscheidest du dich mit deiner ersten
     Prüfungsanmeldung.
   \item[ownCloud] Unter anderem bietet das ZIH dir 2GB Online-Speicher\footref{zihurl} an.
-    Dieser läuft unter dem Name CloudStore (beziehungsweise dem Namen der verwendeten Software ownCloud).
+    Dieser läuft unter dem Name CloudStore\footnote{\url{https://cloudstore.zih.tu-dresden.de}\footref{snr}} (beziehungsweise dem Namen der verwendeten Software ownCloud).
     Dieser ist gegenüber kommerziellen Anbietern zu bevorzugen,
     da hierbei die Daten auf Uni-Servern bleiben. Man kann einzelne Ordner zum Austausch freigeben.
-  \item[OPAL] Wofür OPAL steht ist nicht so einfach zu ermitteln. Es ist eine Internetseite, die hauptsächlich
-    zum Einschreiben in Übungen und Hochladen von Übungszetteln genutzt wird. Theoretisch geht noch viel mehr
+  \item[OPAL] OPAL\footnote{\url{https://bildungsportal.sachsen.de/opal}\footref{snr}} wird zum Einschreiben in Übungen und Hochladen von Übungszetteln genutzt. Theoretisch geht noch viel mehr
     wie Online-Tests und -Übungen.
-    Anmelden kannst du dich mit den ZIH-Login-Daten (s-Nummer).
-  \item[SELMA] SELMA heißt Selbstmanagement und ist ein neues Portal für das Organisatorische
-    im Studium. Für Mathematik-Studierende braucht man es zum Herunterladen der Immatrikulationsbescheinigung
+  \item[SELMA] SELMA\footnote{\url{https://selma.tu-dresden.de}\footref{snr}} heißt Selbstmanagement und ist ein neues Portal für das Organisatorische
+    im Studium. Mathematik-Studierende brauchen es zum Herunterladen der Immatrikulationsbescheinigung
     und den Informationen zur Rückmeldung zum nächsten Semester und zum Melden einer neuen Adresse bei Umzug.
-    Man nutzt die ZIH-Login-Daten.
-  \item[HISQIS] HISQIS ist das Portal zum Anmelden zu Prüfungen. Es soll irgendwann durch SELMA abgelöst werden.
+  \item[HISQIS] HISQIS\footnote{\url{https://qis.dez.tu-dresden.de}\footref{snr}} ist das Portal zum Anmelden zu Prüfungen. Es soll irgendwann durch SELMA abgelöst werden.
   \item[Semesterticket] Mit dem Semesterticket kannst du den ÖPNV nutzen. Welche Busse, Bahnen und Fahrräder dazugehören und wann du wo ein Fahrrad mitnehmen kannst,
     steht ausführlich auf der StuRa-Seite.\footnote{\url{www.stura.tu-dresden.de/semesterticket}}.
   \item[Lehrveranstaltungskatalog] Der Lehrveranstaltungskatalog\footnote{\url{www.math.tu-dresden.de/math/lvk/lv-abfrage-wi17.htm}} enthält Orte und Zeiten aller angebotenen
@@ -203,7 +227,7 @@ sich aber bald anschauen.
     und organisatorischen Fragen.
     In einigen solcher Fälle kann der μFSR auch weiterhelfen.
 
-    Für den Bachelor Mathematik bietet diese Dr.\ Hans-Peter Scheffler
+    Für den Bachelor Mathematik bietet diese Dr.\ Hans-Peter Scheffler%
     \footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}, für das Lehramt Mathematik Dr.\ Karin Weigel\footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}.
   \item[Zentrale Studienberatung] Die zentrale Studienberatung\footnote{\url{www.tu-dresden.de/studium/im-studium/beratung-und-service/zentrale-studienberatung}} ist der erste Ansprechpartner wenn über einen Studiengangswechsel nachgedacht wird. Daneben bietet sie aber auch weitere Angebote,
     die man sich anschauen sollte.
@@ -227,7 +251,9 @@ sich aber bald anschauen.
     Daher möchten wir ihr möglichst wenig Ärger machen, das heißt melde dich rechtzeitig im HISQIS an,
     aber zögere nicht,
     dich an Frau Schreiter\footnote{\href{mailto:karola.schreiter@tu-dresden.de}
-    {\nolinkurl{karola.schreiter@tu-dresden.de}}} (WIL C 109, Mo bis Do 12:30---14:00) zu wenden.
+    {\nolinkurl{karola.schreiter@tu-dresden.de}}} (WIL A 303, Mo bis Do 12:30---14:00) zu wenden.
+    Da die Prüfungsämter des Bereichs MatNat neu zusammengezogen sind, ändert sich möglicherweise ihre
+    Organisation. Wir sind auch noch gespannt, was das genau bedeutet.
 
     Wenn du Mathematik auf Lehramt studierst, ist das zentralisierte Lehrerprüfungsamt zuständig.
     \footnote{\url{www.tu-dresden.de/zlsb/die-einrichtung/studienbuero-lehramt/zentralisiertes-lehrerpruefungsamt-zlpa}}
@@ -242,22 +268,18 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 \section*{Termine}
 \subsection*{ESE-Woche}
 \begin{description}
-  \item[ESE] % TODO:  <05-09-17, Bela> von Markus endgültige Liste bekommen %
-  \item[KrETa] % TODO:  <05-09-17, Bela> spannendes aus KrETa raussuchen %
+  \item[ESE] \todo{ von Markus endgültige Liste bekommen } % TODO:  <05-09-17, Bela> von Markus endgültige Liste bekommen %
+  \item[KrETa] \todo{ spannendes aus KrETa raussuchen } % TODO:  <05-09-17, Bela> spannendes aus KrETa raussuchen %
   \item[Alternative Stadtrundgänge] Am Mi, 11., Fr., 13., Mo., 16. und Di., 17. Oktober, jeweils 17 Uhr
     bietet \keyword{Konsum Global} konsumkritische Stadtrundgänge durch die Neustadt an. Dauer: 2 Stunden,
     Treffpunkt Jorge-Gomondai-Platz beim Albertplatz. Anmeldung\footnote{\href{mailto:konsumglobal_dd@gmx.de}{\nolinkurl{konsumglobal_dd@gmx.de}}} erwünscht, aber nicht zwingend.
 \end{description}
 
-
+\subsection*{Wintersemester}
 
 \begin{itemize}
-  \item 
-    % TODO:  <05-09-17, Bela> Zeitraum der Anmeldung zu Prüfungen %
-  \item Vorlesungsfreie Zeit: 21.12.2017 bis 3.1.2018 und ab 4.2.2018
-  \item Kernprüfungszeit: 5.2.2018 bis 3.3.2018
   \item Hochschulwahlen: voraussichtlich 28.11.2018---30.11.2018. Gewählt wird:
-    % TODO:  <05-09-17, Bela> bitte korrigieren, falls etwas fehlt %
+    \todo{ bitte korrigieren, falls etwas fehlt } % TODO:  <05-09-17, Bela> bitte korrigieren, falls etwas fehlt %
     \begin{itemize}
       \item FSR (11 Mitglieder)
       \item Fakultätsrat Mathematik (4 Studierende)
@@ -265,6 +287,13 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
       \item Senat, erweiterter Senat
     \end{itemize}
     Wenn du dich in eines diesen Gremien wählen lassen möchtest, melde dich bei uns!
+  \item Weihnachtsfeier X-Math-Party
+    \todo{ Termin für Weihnachtsfeier } % TODO:  <06-09-17, Bela> Termin für Weihnachtsfeier %
+  \item Prüfungsanmeldung: Januar 
+    \todo{ Zeitraum der Anmeldung zu Prüfungen } % TODO:  <05-09-17, Bela> Zeitraum der Anmeldung zu Prüfungen %
+  \item Vorlesungsfreie Zeit: 21.12.2017 bis 3.1.2018 und ab 4.2.2018
+  \item Kernprüfungszeit: 5.2.2018 bis 3.3.2018
+  
 \end{itemize}
 
 \newpage
