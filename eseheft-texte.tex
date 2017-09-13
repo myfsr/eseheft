@@ -16,10 +16,11 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{textcomp} % für \textmu
+\usepackage{wrapfig}
 \setlist{noitemsep} % Listen werden kompakter
 
 \begin{document}
-\newcommand{\keyword}{\emph}
+\newcommand{\keyword}{\textbf}
 \newcommand{\todo}[1]{\marginpar{TODO\\#1}}
 % TODO:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
 \newpage
@@ -296,11 +297,15 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 \end{itemize}
 
 \newpage
-\input{../stav/stavpage.tex}
+\input{stavpage}
 
 \newpage
-\input{../arbeiterkind/arbeiterkindpage.tex}
+\input{arbeiterkindpage}
 
 \newpage
-\includepdf{../psychoberatung/Plakate-2-pdfjam.pdf}
+\includepdf{psychoberatung-plakat.pdf}
+
+\newpage
+\input{oesanpage.tex}
+
 \end{document}
