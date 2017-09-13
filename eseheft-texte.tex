@@ -17,9 +17,15 @@
 \usepackage{pdfpages}
 \usepackage{textcomp} % für \textmu
 \usepackage{wrapfig}
-\setlist{noitemsep} % Listen werden kompakter
+\setlist{nosep} % Listen werden kompakter
 
 \begin{document}
+% \the\itemsep
+%
+% \the\parsep
+%
+%  \the\topsep
+%
 \newcommand{\keyword}{\textbf}
 \newcommand{\todo}[1]{\marginpar{TODO\\#1}}
 % TODO:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
@@ -303,9 +309,9 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 \input{arbeiterkindpage}
 
 \newpage
-\includepdf{psychoberatung-plakat.pdf}
+\input{./psychoberatungpage.tex}
+% \includepdf{psychoberatung-plakat.pdf}
 
 \newpage
 \input{./unisanpage.tex}
-
 \end{document}
