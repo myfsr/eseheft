@@ -10,7 +10,7 @@
 \usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{enumitem}
-\usepackage[a5paper, margin=1cm, right=3cm]{geometry}
+\usepackage[a5paper, margin=1cm]{geometry}
 \usepackage{amssymb}
 \usepackage{scrextend} % for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
 \setlength{\emergencystretch}{1em}
@@ -29,10 +29,10 @@
 %
 \newcommand{\keyword}{\textbf}
 \newcommand{\todo}[1]{\marginpar{TODO\\#1}}
-% TODO:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
+% is done:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
 \newpage
-{ \newgeometry{margin=2cm}
-  \thispagestyle{empty} % no page number
+{ %\newgeometry{margin=1cm}
+  % \thispagestyle{empty} % no page number
   % Titlepage, all formatting should be restricted to this page.
   \begin{flushright}
     \includegraphics[width=0.3\textwidth]{./fsrlogos/bw_1024.png}
@@ -43,23 +43,58 @@
     \end{huge}\\\bigskip
     \begin{Large}
       vom FSR Mathematik
-    \end{Large}\\\bigskip
+    \end{Large}\\\vspace{1em}
 %    \includegraphics[width=\textwidth]{./fsrfoto.jpg}
+    \begin{huge}
+      Erstsemestereinführung 2017
+    \end{huge}
+
+    \begin{Large}
+      Veranstaltungen
+    \end{Large}\vspace{1em}
+    \begin{tabular}{llll}
+      Datum        & Was & Zeit & Treffpunkt \\
+      \hline
+      Mi, 4.10. & Einführungsvorlesung    & 9:20--10:50 & TRE/MATH  \\
+        & Grillen & ab 11:10 & Willerswiese \\
+        & Erlebnisland Mathematik & ab 13:00 & Technische Sammlungen \\
+      \hline
+      Do, 5.10 & Spieleabend  & ab 19:00 & WIL/B122 \\
+      \hline
+      Fr, 6.10. & µ-sli\footnote{ohne Müsli}  & 11:10--12:40 & WIL/C107 \\
+                     & Studienfachberatung  & 13:00--16:20 & WIL/C102 \\
+                     & & & WIL/C103 \\
+                     & & & WIL/C104 \\
+      \hline
+      Sa, 7.10 & Wanderung & ab 10:00 & Hauptbahnhof
+    \end{tabular}
+  \begin{Large}
+    Kritische Einführungstage (KRETA)\footnote{\url{https://kreta-dresden.org/}} (Kleine (!) Auswahl)
+  \end{Large}
+  \begin{tabular}{lp{0.4\textwidth}lp{0.2\textwidth}}
+      Datum        & Was & Zeit & Wo? \\
+      \hline
+      Mi, 4.10. & Workshop: Safer Nightlife    & 19:00--21:00 & Café Oha \\
+      Do, 5.10 & Alternativer Neustadtrundgang & 18:00--20:30 & vor der Scheune \\
+      Fr, 6.10. & Workshop Asylrecht  & 14:00--17:30 & HTW Raum S331/S329 \\
+      So, 8.10. & Wanderung mit Input zu Nazistrukturen & 11:00--17:00 & Bhf Neustadt \\
+      Mo, 9.10. & Sichere Kommunikation Theorie \& Praxis & 18:00--20:00 & HSZ/403/H
+    \end{tabular}
   \end{center}
-  TODO: Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) 
+  Weitere Veranstaltungen in den folgenden Wochen findest du auf Seite \pageref{sec:termine}.
   \vfill
   \begin{small}
-    Dieses Heft kann auch als pdf\footnote{\url{TODO: link}} heruntergeladen werden.
+    Dieses Heft kann auch als pdf\footnote{\url{https://myfsr.de} $\rightarrow$ ESE} heruntergeladen werden.
   \end{small}
   \newpage
 }
-restoregeometry % original margins
-\pagenumbering{arabic} % resets numbering to 1
-\pagestyle{plain}
+% \restoregeometry % original margins
+% \pagenumbering{arabic} % resets numbering to 1
+% \pagestyle{plain}
 \section*{\texorpdfstring{$\mu$}{my}FSR -- Fachschaftsrat Mathematik}
 Alle Studierenden der Mathematik an der TU Dresden sind die \keyword{Fachschaft} Mathematik.
 Sie werden vertreten und unterstützt vom Fachschaftsrat Mathematik, kurz μFSR.
-
+%
 Der μFSR ist erreichbar per e-Mail\footnote{\href{mailto:kontakt@myfsr.de}{\nolinkurl{kontakt@myfsr.de}}},
 Internetseite\footnote{\url{https://myfsr.de}} und vor allem persönlich im Raum
 \href{https://navigator.tu-dresden.de/etplan/wil/-1/raum/2193-1.0170}{WIL B 23}.
@@ -140,6 +175,25 @@ Neben den hochschulpolitischen Vertretungen (FSR, Studentenrat (StuRa)) gibt es 
 die sich für verschiedenes einsetzen. Manche stellen sich in diesem Heft vor,
 alle findet man auf der Internetseite des StuRa\footnote{\url{www.stura.tu-dresden.de/hochschulgruppen}}.
 
+\section*{Termine Wintersemester}\label{sec:termine}
+\begin{description}
+  \item[Alternative Stadtrundgänge] Am Mi, 11., Fr., 13., Mo., 16. und Di., 17. Oktober, jeweils 17 Uhr
+    bietet \keyword{Konsum Global} konsumkritische Stadtrundgänge durch die Neustadt an. Dauer: 2 Stunden,
+    Treffpunkt Jorge-Gomondai-Platz beim Albertplatz. Anmeldung\footnote{\href{mailto:konsumglobal_dd@gmx.de}{\nolinkurl{konsumglobal_dd@gmx.de}}} erwünscht, aber nicht zwingend.
+  \item[Hochschulwahlen] voraussichtlich 28.11.2018---30.11.2018. Gewählt wird:
+    \begin{itemize}
+      \item FSR (11 Mitglieder)
+      \item Fakultätsrat Mathematik (3 Studierende)
+      \item Fakultätsrat Mathematik und Naturwissenschaften (4 Studierende)
+      \item Senat, erweiterter Senat (je 4 Studierende)
+    \end{itemize}
+    Wenn du dich in eines diesen Gremien wählen lassen möchtest, melde dich bei uns!
+  \item [Weihnachtsfeier X-Math-Party] im Dezember.
+  \item [Prüfungsanmeldung] Ab Anfang Januar 
+  \item [Vorlesungsfreie Zeit] 21.12.2017 bis 3.1.2018 und ab 4.2.2018
+  \item [Kernprüfungszeit] 5.2.2018 bis 3.3.2018
+\end{itemize}
+
 \section*{Angebote der Universität: Checkliste}
 \label{sec:angebote_der_universitat}
 Die TU Dresden bietet eine Menge Services an, die sehr praktisch für das Studium und auch drum herum sein können.
@@ -174,7 +228,7 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
     Infos auf \url{www.slub-dresden.de/service/nutzer-der-slub-werden}.
   \clitem{Mensa-Karte} Du kannst theoretisch in der Mensa mit Bargeld bezahlen,
     aber das ist unpraktisch und hält den eh vollen Betrieb auf und
-    du müsstest dich jedes Mal als Student ausweisen.
+    du müsstest dich jedes Mal als studierend ausweisen.
     Deshalb gibt es die Mensa-Karte,
     die du in jeder Mensa für 5€ Kaution bekommst.
     Um Studentenpreise zu zahlen musst du die EMeal-Bescheinigung von deinem Immatrikulationsbogen
@@ -193,7 +247,8 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
     Sportkursen an, die für Studierende auch sehr günstig sind.
     Sehr viele dieser Kurse sind sehr beliebt, weshalb man sehr schnell bei der Anmeldung sein muss.
     Sehr schnell bedeutet, dass innerhalb von unter 10 Sekunden alle Plätze vergeben sein können.
-    \todo{ wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. } % TODO:  <30-08-17, Bela> wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. %
+    Die Schnellanmeldefunktion (in der Kursliste) kann da hilfreich sein.
+    % is done halfway: <30-08-17, Bela> wie heißt die Schnellanmeldefunktion? Die ist als Kurs registriert. %
     Der Anmeldebeginn steht bei dem jeweiligen Kurs dabei. Die ersten beginnen am 10.10.2017 um 17 Uhr.
   \clitem{Kulturangebote} Es gibt ca.\ 30 künstlerische Gruppen\footnote{\url{https://www.studentenwerk-dresden.de/kultur/gruppen.html}} bei denen du dich ausleben kannst.
 \end{description}
@@ -274,37 +329,6 @@ dann tut uns das Leid. Es liegt daran, dass
 die meisten μFSR-ler kein Lehramt studieren und sich deshalb
 nicht so gut auskennen. Du kannst das ändern, indem du den
 μFSR als gewähltes oder assoziiertes Mitglied unterstützt!
-
-\section*{Termine}
-\subsection*{ESE-Woche}
-\begin{description}
-  \item[ESE] \todo{ von Markus endgültige Liste bekommen } % TODO:  <05-09-17, Bela> von Markus endgültige Liste bekommen %
-  \item[KrETa] \todo{ spannendes aus KrETa raussuchen } % TODO:  <05-09-17, Bela> spannendes aus KrETa raussuchen %
-  \item[Alternative Stadtrundgänge] Am Mi, 11., Fr., 13., Mo., 16. und Di., 17. Oktober, jeweils 17 Uhr
-    bietet \keyword{Konsum Global} konsumkritische Stadtrundgänge durch die Neustadt an. Dauer: 2 Stunden,
-    Treffpunkt Jorge-Gomondai-Platz beim Albertplatz. Anmeldung\footnote{\href{mailto:konsumglobal_dd@gmx.de}{\nolinkurl{konsumglobal_dd@gmx.de}}} erwünscht, aber nicht zwingend.
-\end{description}
-
-\subsection*{Wintersemester}
-
-\begin{itemize}
-  \item Hochschulwahlen: voraussichtlich 28.11.2018---30.11.2018. Gewählt wird:
-    \todo{ bitte korrigieren, falls etwas fehlt } % TODO:  <05-09-17, Bela> bitte korrigieren, falls etwas fehlt %
-    \begin{itemize}
-      \item FSR (11 Mitglieder)
-      \item Fakultätsrat Mathematik (4 Studierende)
-      \item Bereichsrat Mathematik und Naturwissenschaften (4 Studierende)
-      \item Senat, erweiterter Senat
-    \end{itemize}
-    Wenn du dich in eines diesen Gremien wählen lassen möchtest, melde dich bei uns!
-  \item Weihnachtsfeier X-Math-Party
-    \todo{ Termin für Weihnachtsfeier } % TODO:  <06-09-17, Bela> Termin für Weihnachtsfeier %
-  \item Prüfungsanmeldung: Januar 
-    \todo{ Zeitraum der Anmeldung zu Prüfungen } % TODO:  <05-09-17, Bela> Zeitraum der Anmeldung zu Prüfungen %
-  \item Vorlesungsfreie Zeit: 21.12.2017 bis 3.1.2018 und ab 4.2.2018
-  \item Kernprüfungszeit: 5.2.2018 bis 3.3.2018
-  
-\end{itemize}
 
 \newpage
 \input{./radiopage.tex}
