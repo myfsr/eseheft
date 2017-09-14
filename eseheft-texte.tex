@@ -20,6 +20,24 @@
 \usepackage{wrapfig}
 \setlist{nosep} % Listen werden kompakter
 
+% Platzsparen bei section überschriften
+\RedeclareSectionCommand[
+  afterskip=1ex plus .2ex,
+  beforeskip=-2ex plus -1ex minus -.2ex,
+  indent=0pt,
+  level=1,
+  tocindent=1.5em,
+  tocnumwidth=2.3em
+  ]{section}
+\RedeclareSectionCommand[
+  afterskip=1ex plus .2ex,
+  beforeskip=-1.5ex plus -1ex minus -.7ex,
+  indent=0pt,
+  level=2,
+  tocindent=3.8em,
+  tocnumwidth=3.2em
+  ]{subsection}
+
 \begin{document}
 % \the\itemsep
 %
@@ -332,27 +350,30 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 
 \newpage
 \input{./radiopage.tex}
+\input{./unisanpage.tex}
 
 \newpage
+\input{./consonarepage.tex}
 \input{stavpage}
 
 \newpage
 \input{arbeiterkindpage}
 
 \newpage
-\input{./psychoberatungpage.tex}
+% \input{./psychoberatungpage.tex}
 \includepdf{./psychoberatungplakat-gray.pdf}
 
 \newpage
 \includepdf{./tandem-plakat-gray.pdf}
 
-\newpage
-\input{./unisanpage.tex}
-\input{./consonarepage.tex}
+% \newpage
 
 \newpage
 \input{./courage-page.tex}
 
 \newpage
 \input{./schreibzentrumpage.tex}
+
+\newpage
+\input{./erstifahrtpage.tex}
 \end{document}
