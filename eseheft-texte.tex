@@ -1,16 +1,21 @@
 %! TEX program = lualatex
 
-\documentclass{scrartcl}
+\documentclass[twoside, toc=sectionentrywithdots]{scrartcl}
 % \usepackage[T1]{fontenc}
 % \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{fontspec}
 \setmainfont{Linux Libertine O}
 \usepackage{csquotes}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{microtype}
+\usepackage{scrlayer-scrpage}
+\ohead{\thepage}
+\pagestyle{scrheadings}
 \usepackage{enumitem}
-\usepackage[a5paper, margin=1cm]{geometry}
+\usepackage[a5paper, margin=1cm, top=1.5cm, headsep=0pt]{geometry}
+\usepackage[width=152truemm,height=214truemm,center]{crop}
+% \usepackage[width=154truemm,height=216truemm,center]{crop}
 \usepackage{amssymb}
 \usepackage{scrextend} % for footnotes, see https://tex.stackexchange.com/questions/35043/reference-different-places-to-the-same-footnote
 \setlength{\emergencystretch}{1em}
@@ -19,7 +24,6 @@
 \usepackage{textcomp} % für \textmu
 \usepackage{wrapfig}
 \setlist{nosep} % Listen werden kompakter
-
 % Platzsparen bei section überschriften
 \RedeclareSectionCommand[
   afterskip=1ex plus .2ex,
@@ -27,7 +31,8 @@
   indent=0pt,
   level=1,
   tocindent=1.5em,
-  tocnumwidth=2.3em
+  tocnumwidth=2.3em,
+  % tocbeforeskip=0pt
   ]{section}
 \RedeclareSectionCommand[
   afterskip=1ex plus .2ex,
@@ -36,9 +41,14 @@
   level=2,
   tocindent=3.8em,
   tocnumwidth=3.2em
+  % tocbeforeskip=10em
   ]{subsection}
+\usepackage[titles]{tocloft}
+  \setlength{\cftbeforesecskip}{0ex}
+
 
 \begin{document}
+% \the\headsep
 % \the\itemsep
 %
 % \the\parsep
@@ -50,7 +60,7 @@
 % is done:  <06-09-17, Bela> Deckblatt: μFSR-Bild, dafür nach Möglichkeit ein neues machen (Bene, Luisa, Felix sind weg, Assoziierte können mit rauf) %
 \newpage
 { %\newgeometry{margin=1cm}
-  % \thispagestyle{empty} % no page number
+  \thispagestyle{empty} % no page number
   % Titlepage, all formatting should be restricted to this page.
   \begin{flushright}
     \includegraphics[width=0.3\textwidth]{./fsrlogos/bw_1024.png}
@@ -77,7 +87,7 @@
         & Grillen & ab 11:10 & Willerswiese \\
         & Erlebnisland Mathematik & ab 13:00 & Technische Sammlungen \\
       \hline
-      Do, 5.10 & Spieleabend  & ab 19:00 & WIL/B122 \\
+      Do, 5.10. & Spieleabend  & ab 19:00 & WIL/B122 \\
       \hline
       Fr, 6.10. & µ-sli\footnote{ohne Müsli}  & 11:10--12:40 & WIL/C107 \\
                      & Studienfachberatung  & 13:00--16:20 & WIL/C102 \\
@@ -93,10 +103,10 @@
       Datum        & Was & Zeit & Wo? \\
       \hline
       Mi, 4.10. & Workshop: Safer Nightlife    & 19:00--21:00 & Café Oha \\
-      Do, 5.10 & Alternativer Neustadtrundgang & 18:00--20:30 & vor der Scheune \\
+      Do, 5.10. & Alternativer Neustadtrundgang & 18:00--20:30 & vor der Scheune \\
       Fr, 6.10. & Workshop Asylrecht  & 14:00--17:30 & HTW Raum S331/S329 \\
       So, 8.10. & Wanderung mit Input zu Nazistrukturen & 11:00--17:00 & Bhf Neustadt \\
-      Mo, 9.10. & Sichere Kommunikation Theorie \& Praxis & 18:00--20:00 & HSZ/403/H
+      Mo, 9.10. & Sichere Kommunikation: Theorie \& Praxis & 18:00--20:00 & HSZ/403/H
     \end{tabular}
   \end{center}
   Weitere Veranstaltungen in den folgenden Wochen findest du auf Seite \pageref{sec:termine}.
@@ -109,7 +119,9 @@
 % \restoregeometry % original margins
 % \pagenumbering{arabic} % resets numbering to 1
 % \pagestyle{plain}
+\tableofcontents
 \section*{\texorpdfstring{$\mu$}{my}FSR -- Fachschaftsrat Mathematik}
+\addcontentsline{toc}{section}{Vorstellung Fachschaftsrat Mathematik}
 Alle Studierenden der Mathematik an der TU Dresden sind die \keyword{Fachschaft} Mathematik.
 Sie werden vertreten und unterstützt vom Fachschaftsrat Mathematik, kurz μFSR.
 %
@@ -186,18 +198,22 @@ Dazu stellt der zuständige studentische Wahlausschuss das Formular
 % Zu welcher Fachschaft du gehörst, hast du bei der Immatrikulation entschieden, du kannst es aber jederzeit ändern.
 % In erster Linie ist es bei den Hochschulwahlen relevant, denn dort kannst du nur bei deiner offiziellen
 % eigenen Fachschaft wählen und gewählt werden.
-
+%
 \subsection*{Hochschulgruppen}
 \label{sub:hochschulgruppen}
 Neben den hochschulpolitischen Vertretungen (FSR, Studentenrat (StuRa)) gibt es zahlreiche Hochschulgruppen,
 die sich für verschiedenes einsetzen. Manche stellen sich in diesem Heft vor,
-alle findet man auf der Internetseite des StuRa\footnote{\url{www.stura.tu-dresden.de/hochschulgruppen}}.
-
+alle findet man auf der Internetseite des StuRa\footnote{\url{www.stura.tu-dresden.de/hochschulgruppen}} und in der Broschüre \enquote{Studentische Hochschulgruppen}\footnote{\url{https://www.stura.tu-dresden.de/webfm_send/2319}}.
+%
 \section*{Termine Wintersemester}\label{sec:termine}
+\addcontentsline{toc}{section}{Termine Wintersemester}
 \begin{description}
   \item[Alternative Stadtrundgänge] Am Mi, 11., Fr., 13., Mo., 16. und Di., 17. Oktober, jeweils 17 Uhr
     bietet \keyword{Konsum Global} konsumkritische Stadtrundgänge durch die Neustadt an. Dauer: 2 Stunden,
     Treffpunkt Jorge-Gomondai-Platz beim Albertplatz. Anmeldung\footnote{\href{mailto:konsumglobal_dd@gmx.de}{\nolinkurl{konsumglobal_dd@gmx.de}}} erwünscht, aber nicht zwingend.
+  \item[Informationen vom Studentenwerk] Das Studentenwerk wird am 5.10., 19.10.\ und 26.10.\ 
+    jeweils 11:00--17:00 Uhr zu seinen vielen Serviceangeboten
+    am Servicepunkt im Eingangsbereich der SLUB informieren.% Es gibt auch Give-aways und Nützliches.  
   \item[Hochschulwahlen] voraussichtlich 28.11.2018---30.11.2018. Gewählt wird:
     \begin{itemize}
       \item FSR (11 Mitglieder)
@@ -205,15 +221,16 @@ alle findet man auf der Internetseite des StuRa\footnote{\url{www.stura.tu-dresd
       \item Fakultätsrat Mathematik und Naturwissenschaften (4 Studierende)
       \item Senat, erweiterter Senat (je 4 Studierende)
     \end{itemize}
-    Wenn du dich in eines diesen Gremien wählen lassen möchtest, melde dich bei uns!
+    Wenn du dich in eines diesen Gremien wählen lassen möchtest, melde dich bei uns bis zum \keyword{07.11.2017}!
   \item [Weihnachtsfeier X-Math-Party] im Dezember.
   \item [Prüfungsanmeldung] Ab Anfang Januar 
   \item [Vorlesungsfreie Zeit] 21.12.2017 bis 3.1.2018 und ab 4.2.2018
   \item [Kernprüfungszeit] 5.2.2018 bis 3.3.2018
-\end{itemize}
+\end{description}
 
 \section*{Angebote der Universität: Checkliste}
 \label{sec:angebote_der_universitat}
+\addcontentsline{toc}{section}{Checkliste Uniservices}
 Die TU Dresden bietet eine Menge Services an, die sehr praktisch für das Studium und auch drum herum sein können.
 Man muss sie nur kennen. Hier ist eine Liste von Angeboten, die du für dich einrichten solltest.
 Eine deutlich umfangreichere Informationssammlung zum Studienstart
@@ -222,8 +239,8 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
 % \newcommand{footnoteref}[1]{\footnotemark[\ref{#1}]}
 \begin{description}
   \clitem{ZIH-Login aktivieren} Das Zentrum für Informationsdienste und Hochleistungsrechnen (\keyword{ZIH})
-    bietet alle IT-Dienste für die TUD an. Man braucht daher einen \keyword{ZIH-Login}, den bei der
-    Immatrikulation bekommen hat, aber noch aktiviert werden muss.
+    bietet alle IT-Dienste für die TUD an. Du braucht daher einen \keyword{ZIH-Login}, den du bei der
+    Immatrikulation bekommen hast, aber noch aktivieren musst.
     Dieser wird häufig als \keyword{s-Nummer} bezeichnet, da es eine Nummer mit vorangestelltem „s“ ist.
     Informationen dazu und zu allen (folgenden) IT-Diensten finden sich ausführlich auf den
     Erstsemesterseiten des ZIH \footnote{\url{https://tu-dresden.de/zih/dienste/service-desk/ese}\label{zihurl}}.
@@ -270,6 +287,7 @@ existiert online\footnote{\url{www.tu-dresden.de/studienstart}} von der Uni.
     Der Anmeldebeginn steht bei dem jeweiligen Kurs dabei. Die ersten beginnen am 10.10.2017 um 17 Uhr.
   \clitem{Kulturangebote} Es gibt ca.\ 30 künstlerische Gruppen\footnote{\url{https://www.studentenwerk-dresden.de/kultur/gruppen.html}} bei denen du dich ausleben kannst.
 \end{description}
+\addcontentsline{toc}{section}{weitere Uniservices}
 Die folgende Punkte muss man nicht unbedingt direkt am Anfang des Semesters beachten, sollte man
 sich aber bald anschauen:
 \begin{description}
@@ -289,7 +307,7 @@ sich aber bald anschauen:
     Für dein Nebenfach entscheidest du dich mit deiner ersten
     Prüfungsanmeldung.
   \item[ownCloud] Unter anderem bietet das ZIH dir 2GB Online-Speicher\footref{zihurl} an.
-    Dieser läuft unter dem Name CloudStore\footnote{\url{https://cloudstore.zih.tu-dresden.de}\footref{snr}} (beziehungsweise dem Namen der verwendeten Software ownCloud).
+    Dieser läuft unter dem Namen CloudStore\footnote{\url{https://cloudstore.zih.tu-dresden.de}\footref{snr}} (beziehungsweise dem Namen der verwendeten Software ownCloud).
     Dieser ist gegenüber kommerziellen Anbietern zu bevorzugen,
     da hierbei die Daten auf Uni-Servern bleiben. Man kann einzelne Ordner zum Austausch freigeben.
   \item[OPAL] OPAL\footnote{\url{https://bildungsportal.sachsen.de/opal}\footref{snr}} wird zum Einschreiben in Übungen und Hochladen von Übungszetteln genutzt. Theoretisch geht noch viel mehr
@@ -308,18 +326,18 @@ sich aber bald anschauen:
     In einigen solcher Fälle kann der μFSR auch weiterhelfen.
 
     Für den Bachelor Mathematik bietet diese Dr.\ Hans-Peter Scheffler%
-    \footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}, für das Lehramt Mathematik Dr.\ Karin Weigel\footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}.
+    \footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}} an, für das Lehramt Mathematik Dr.\ Karin Weigel\footnote{\url{www.tu-dresden.de/mn/math/studium/beratung/bachelor_mathematik}}.
   \item[Zentrale Studienberatung] Die zentrale Studienberatung\footnote{\url{www.tu-dresden.de/studium/im-studium/beratung-und-service/zentrale-studienberatung}} ist der erste Ansprechpartner wenn über einen Studiengangswechsel nachgedacht wird. Daneben bietet sie aber auch weitere Angebote,
     die man sich anschauen sollte.
-    Nichtsdestotrotz haben die meisten innerhalb des Mathematikstudiums keinen Kontakt dahin.
+    % Nichtsdestotrotz haben die meisten innerhalb des Mathematikstudiums keinen Kontakt damit.
   \item[Career-Service] Der Career-Service\footnote{\url{www.tu-dresden.de/studium/im-studium/beratung-und-service/career-service}} bietet in erster Linie Unterstützung beim Berufseinstieg.
     Aber er bietet auch zahlreiche Workshops\footnote{\url{www.tu-dresden.de/karriere/berufseinstieg/ressourcen/dateien/flyer/2017/semesterprogramm-des-career-service-winter-2017-18\#page=2}} an, die bereits im Studium
     sehr hilfreich sein können wie bspw.\ zu Prüfungsbewältigung und
     wissenschaftlichem Arbeiten und Schreiben.
-  \item[Schreibzentrum] Das Schreibzentrum bietet Unterstützung beim Schreiben von wissenschaftlichen Arbeiten, siehe auch deren Seite.
+  \item[Schreibzentrum] Das Schreibzentrum bietet Unterstützung an beim Schreiben von wissenschaftlichen Arbeiten, siehe auch deren Seite \pageref{sec:schreibzentrum}.
   \item[Studiendokumente] Um nicht von bisher unbekannten Regelungen
     überrascht zu werden, empfiehlt es sich, die Studiendokumente
-    \footnote{Bachelor: \url{www.tu-dresden.de/mn/studium/studiendokumente-formulare/mathematik-bachelor}\\
+    \footnote{\flushleft Bachelor: \url{www.tu-dresden.de/mn/studium/studiendokumente-formulare/mathematik-bachelor}\\
     Lehramt: \url{www.tu-dresden.de/zlsb/lehramtsstudium/studiendokumente}}
     (Studien- und Prüfungsordnung) zur Verfügung stehen zu haben und
     gelesen zu haben.
@@ -349,6 +367,7 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 μFSR als gewähltes oder assoziiertes Mitglied unterstützt!
 
 \newpage
+\addcontentsline{toc}{section}{Hochschulgruppen u.ä.\ stellen sich vor}
 \input{./radiopage.tex}
 \input{./unisanpage.tex}
 
@@ -357,6 +376,7 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 \input{stavpage}
 
 \newpage
+\input{./ksgesgpage.tex}
 \input{arbeiterkindpage}
 
 \newpage
@@ -375,5 +395,6 @@ nicht so gut auskennen. Du kannst das ändern, indem du den
 \input{./schreibzentrumpage.tex}
 
 \newpage
+\addcontentsline{toc}{section}{Ersti-Fahrt}
 \input{./erstifahrtpage.tex}
 \end{document}
